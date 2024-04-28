@@ -1,0 +1,1 @@
+{"version":3,"file":"regex.js","sourceRoot":"","sources":["regex.ts"],"names":[],"mappings":"AAAA,SAAS;AACT,MAAM,YAAY,GAAG,gCAAgC,CAAC;AAEtD,eAAe;IACb,YAAY;CACb,CAAC","sourcesContent":["// 裸包导入正则\nconst bareImportRE = /^(?![a-zA-Z]:)[\\w@](?!.*:\\/\\/)/;\n\nexport default {\n  bareImportRE,\n};\n"]}

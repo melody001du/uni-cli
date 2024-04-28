@@ -1,19 +1,13 @@
 {
   // "extends": "@tsconfig/node20/tsconfig.json",
-  "include": [
-    "index.ts",
-    "pluginDriver/**/*"
-  ],
-  "exclude": [
-    "node_modules/**/*",
-    "dist/**/*"
-  ],
+  "include": ["index.ts", "src/**/*"],
+  "exclude": ["node_modules/**/*", "dist/**/*", "src/packages/**/*"],
   "compilerOptions": {
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ], // 指定编译过程中将包含哪些库的类型定义
+    // "lib": [
+    //   "DOM",
+    //   "DOM.Iterable",
+    //   "ESNext"
+    // ], // 指定编译过程中将包含哪些库的类型定义
     "target": "es2016", // 对输出代码进行语法特性的转换
     "module": "ESNext", // 输出代码使用的模块格式
     "moduleResolution": "bundler", // Ts 编译器如何查找模块，比如使用 import 或 require 语句时，Ts 编译器应该如何查找和定位模块文件
@@ -27,7 +21,7 @@
     "isolatedModules": true, // 每一个文件应该能够单独编译，而不需要去考虑其他文件
     // "jsx": "react-jsx" // 使用 JSX 时不用再自动插入 React 的导入语句，特别是在那些 React 不是唯一库或不是直接导入的项目中
     "noEmit": true, // 阻止 TypeScript 编译器产生输出文件，比如只想利用 TypeScript 进行类型检查，然后使用 Babel 来处理 TypeScript 到 JavaScript 的转译
-    "incremental": true, // 启用增量编译
+    // "incremental": true, // 启用增量编译
     "verbatimModuleSyntax": true, // 导入导出类型时必须添加 type 关键字
     "noUnusedLocals": true, // 检查未使用的局部变量
     "noUnusedParameters": true, // 检查未使用的参数
