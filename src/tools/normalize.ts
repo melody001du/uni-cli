@@ -12,8 +12,14 @@ function addTrailingSlash(path: string) {
   return path.endsWith("/") ? path : `${path}/`;
 }
 
-export default {
+function getNameFromId(id) {
+  if (!id) return "";
+  return path.basename(id);
+}
+
+export {
   normalizePath,
   normalizeRelativePathToAbsolutePath,
   addTrailingSlash,
+  getNameFromId,
 };
